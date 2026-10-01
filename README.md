@@ -17,8 +17,8 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 - [x] Private network configured 
 - [x] SSH connectivity established 
 - [x] Ansible installed
-- [ ] Ansible inventory
-- [ ] Ansible ping
+- [x] Ansible inventory
+- [x] Ansible ping
 - [ ] First playbook
 - [ ] Multiple-server automation
 - [ ] Software management 
