@@ -19,9 +19,14 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 - [x] Ansible installed
 - [x] Ansible inventory
 - [x] Ansible ping
-- [ ] First playbook
+- [x] First playbook
 - [ ] Multiple-server automation
 - [ ] Software management 
 - [ ] Patch management
 - [ ] Security hardening
 - [ ] Server scanning
+
+### First Ansible Playbok
+- Created `/opt/ansible-lab` on the ubuntu managed server.
+- Used Ansible privilege escalation (`become`) to run the task as a root.
+- Verified the directory exists on Ubuntu.
