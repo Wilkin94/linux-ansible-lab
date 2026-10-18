@@ -23,7 +23,7 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 
 ### Phase 2: Ansible Automation
 - [x] First Ansible playbook
-- [ ] Multi-task playbooks
+- [x] Multi-task playbooks
 - [ ] Variables and facts
 - [ ] Handlers and templates
 - [ ] Ansible roles
@@ -100,3 +100,15 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 - [ ] Build an end-to-end automation workflow
 - [ ] Document architecture and deployment
 - [ ] Publish final project documentation
+
+## Project Milestones
+
+### Milestone 1: First Ansible Playbook
+- Created `/opt/ansible-lab` on Ubuntu.
+- Used Ansible privlege escalation with `become: true`.
+- Verified the directory existed.
+
+### Milestone 2: Multi-Task Ansible Playbook
+- Created `/opt/ansible-lab/lab-notes.txt`.
+- Applied file permissions of `0644`.
+- Verified the file remotely from RHEL.

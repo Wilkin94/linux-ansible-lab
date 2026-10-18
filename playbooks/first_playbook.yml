@@ -1,0 +1,18 @@
+---
+- name: Create a directory on Ubuntu
+  hosts: ubuntu
+  become: true
+
+  tasks:
+  - name: Create lab directory
+    ansible.builtin.file:
+      path: /opt/ansible-lab
+      state: directory
+      mode: '0755'
+
+  - name: Create a lab notes file
+    ansible.builtin.file:
+      path: /opt/ansible-lab/lab-notes.txt
+      state: touch
+      mode: '0644'
+
