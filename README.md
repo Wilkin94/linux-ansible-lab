@@ -24,7 +24,7 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 ### Phase 2: Ansible Automation
 - [x] First Ansible playbook
 - [x] Multi-task playbooks
-- [ ] Variables and facts
+- [x] Variables and facts
 - [ ] Handlers and templates
 - [ ] Ansible roles
 - [ ] Multi-server automation
@@ -112,3 +112,13 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 - Created `/opt/ansible-lab/lab-notes.txt`.
 - Applied file permissions of `0644`.
 - Verified the file remotely from RHEL.
+
+### Milestone 3: Ansible Variables
+
+- Created `playbooks/variables_facts.yml`.
+- Defined a reusable `lab_directory` variable. 
+- Used Ansible's file module to create `/opt/ansible-variables-lab`.
+- Applied directory permissions of `0755`.
+- Verified the directory remotely fromt RHEL control node.
+- Confirmed successful execution on the Ubuntu manged server.
+
