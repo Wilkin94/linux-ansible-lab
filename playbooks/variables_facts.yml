@@ -1,0 +1,12 @@
+---
+- name: Practice Ansible Variables and Facts
+  hosts: ubuntu
+  become: true
+  vars:
+    lab_directory: /opt/ansible-variables-lab
+  tasks:
+    - name: Create directory using variable
+      ansible.builtin.file:
+        path: "{{ lab_directory }}"
+        state: directory
+        mode: '0755'
