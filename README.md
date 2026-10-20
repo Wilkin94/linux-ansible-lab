@@ -122,3 +122,11 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 - Verified the directory remotely fromt RHEL control node.
 - Confirmed successful execution on the Ubuntu manged server.
 
+### Milestone 4: Ansible Facts
+
+- Created `playbooks/facts.yml`.
+- Enabled automatic fact gathering with `gather_facts: true`.
+- Used Ansible's `ansible.builtin.debug` module to display system information.
+- Retrieved the Ubuntu distribution and operating system version.
+- Verified the playbook passed the syntax check.
+- Successfully executed the playbook against the Ubuntu managed server.

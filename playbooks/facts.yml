@@ -1,0 +1,14 @@
+---
+- name: Display Ubuntu Server Facts
+  hosts: ubuntu
+  gather_facts: true
+
+  tasks:
+    - name: Display operating system
+      ansible.builtin.debug:
+        msg: "Operating System: {{ ansible_distribution }}"
+
+    - name: Display operating system version
+      ansible.builtin.debug:
+        msg: "OS Version: {{ ansible_distribution_version }}"
+
