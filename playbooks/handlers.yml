@@ -1,0 +1,17 @@
+---
+- name: Practice Ansible Handlers
+  hosts: ubuntu
+  become: true
+
+  tasks:
+    - name: Create handler lab file
+      ansible.builtin.copy:
+        dest: /opt/ansible-handler-lab.txt
+        content: "Ansible handler lab is working."
+        mode: '0644'
+      notify: Report file change
+
+  handlers:
+    - name: Report file change
+      ansible.builtin.debug:
+        msg: "The file changed, so the handler ran!"

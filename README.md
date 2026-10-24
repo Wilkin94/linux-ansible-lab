@@ -25,7 +25,7 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 - [x] First Ansible playbook
 - [x] Multi-task playbooks
 - [x] Variables and facts
-- [ ] Handlers and templates
+- [x] Handlers and templates
 - [ ] Ansible roles
 - [ ] Multi-server automation
 - [ ] Automated software management
@@ -130,3 +130,14 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 - Retrieved the Ubuntu distribution and operating system version.
 - Verified the playbook passed the syntax check.
 - Successfully executed the playbook against the Ubuntu managed server.
+
+### Milestone 5: Ansible Facts
+
+- Created `playbooks/handlers.yml`.
+- Used the ansible.builtin.copy module to create a lab file on Ubuntu.
+- Used notify to trigger a handler when the file changed.
+- Used ansible.builtin.debug to display a message when the handler ran.
+- Verified the handler executed successfully on the first run.
+- Ran the playbook a second time and confirmed change=0, demostrating idempotency.
+- Successfully tested the playbook against the Ubuntu managed server.
+
