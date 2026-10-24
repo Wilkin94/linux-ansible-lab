@@ -151,3 +151,14 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 - Verified the generated file contained the expected application name, environment, and managed server address.
 - Ran the playbook a second time and confirmed chnaged=0, demonstrating idempotency.
 - Successfully tested the playbook against the Ubuntu managed server.
+
+### Milestone 7: Ansible Roles
+
+- Created the `roles/lab_setup/` directory structure.
+- Created `roles/lab_setup/tasks/main.yml` to define reuseable tasks.
+- Created `playbooks/role_test.yml` to run the role against Ubuntu.
+- Used `ansible.builtin.import_role` to import the lab_setup role.
+- Used `become: true` to run the task with elevated privileges.
+- Successfully created `/opt/ansible-role-lab` on Ubuntu managed server,
+- Verified the directory exists with permissions `0755`.
+= Comfirmed the playbook passed the syntax check and executed successfully.

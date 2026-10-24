@@ -1,0 +1,6 @@
+---
+- name: Create note lab directory
+  ansible.builtin.file:
+    path: /opt/ansible-role-lab
+    state: directory
+    mode: '0755'
