@@ -1,2 +1,5 @@
 [ubuntu]
 192.168.56.103 ansible_user=vboxuser
+
+[linux_servers:children]
+ubuntu

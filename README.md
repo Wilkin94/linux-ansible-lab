@@ -26,7 +26,7 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 - [x] Multi-task playbooks
 - [x] Variables and facts
 - [x] Handlers and templates
-- [ ] Ansible roles
+- [x] Ansible roles
 - [ ] Multi-server automation
 - [ ] Automated software management
 - [ ] Automated patch management
@@ -161,4 +161,14 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 - Used `become: true` to run the task with elevated privileges.
 - Successfully created `/opt/ansible-role-lab` on Ubuntu managed server,
 - Verified the directory exists with permissions `0755`.
-= Comfirmed the playbook passed the syntax check and executed successfully.
+- Comfirmed the playbook passed the syntax check and executed successfully.
+
+### Milestone 8: Multi-Server Automation
+
+- Created `playbooks/multi_server.yml`.
+- Created the `linux_servers` parent inventory group.
+- Used `ansible.builtin.file` to create `/opt/ansible-multi-server-lab`.
+- Verified the directory exists on the Ubuntu managed server with permissions `0755`.
+- Successfully ran the playbook with `failed=0`.
+- Verified Ansible can target the parent group using an Ansible ping test.
+- Note: Only one manager server is currently configured; testing across multiple machines requires adding a second server.

@@ -1,0 +1,11 @@
+---
+- name: Practice Multi-Server Automation
+  hosts: linux_servers
+  become: true
+
+  tasks:
+    - name: Create a directory on all Linux servers
+      ansible.builtin.file:
+        path: /opt/ansible-multi-server-lab
+        state: directory
+        mode: '0755'
