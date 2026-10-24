@@ -1,0 +1,14 @@
+---
+- name: Practice Ansible Templates
+  hosts: ubuntu
+  become: true
+
+  vars:
+    app_name: Linux Ansible lab
+    deployment_environment: Training
+  tasks:
+    - name: Generate configuration file from template
+      ansible.builtin.template:
+        src: ../templates/lab-config.j2
+        dest: /opt/ansible-template-lab.txt
+        mode: '0644'

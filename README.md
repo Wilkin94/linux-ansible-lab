@@ -131,13 +131,23 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 - Verified the playbook passed the syntax check.
 - Successfully executed the playbook against the Ubuntu managed server.
 
-### Milestone 5: Ansible Facts
+### Milestone 5: Ansible Handlers
 
 - Created `playbooks/handlers.yml`.
-- Used the ansible.builtin.copy module to create a lab file on Ubuntu.
+- Used the `ansible.builtin.copy` module to create a lab file on Ubuntu.
 - Used notify to trigger a handler when the file changed.
-- Used ansible.builtin.debug to display a message when the handler ran.
+- Used `ansible.builtin.debug` to display a message when the handler ran.
 - Verified the handler executed successfully on the first run.
 - Ran the playbook a second time and confirmed change=0, demostrating idempotency.
 - Successfully tested the playbook against the Ubuntu managed server.
 
+### Milestone 6: Ansible Templates
+
+- Created `templates/lab-config.j2`.
+- Created `playbooks/templates.yml`.
+- Used Jinja2 variables to generate a configuration file.
+- Used the `ansible.builtin.template` module to create /opt/ansible-template-lab.txt on Ubuntu. 
+- Corrected the variable name to `deployment_environment` to avoid an Ansible reversed-variable warning.
+- Verified the generated file contained the expected application name, environment, and managed server address.
+- Ran the playbook a second time and confirmed chnaged=0, demonstrating idempotency.
+- Successfully tested the playbook against the Ubuntu managed server.
