@@ -27,8 +27,8 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 - [x] Variables and facts
 - [x] Handlers and templates
 - [x] Ansible roles
-- [ ] Multi-server automation
-- [ ] Automated software management
+- [x] Multi-server automation
+- [x] Automated software management
 - [ ] Automated patch management
 
 ### Phase 3: Linux System Administration
@@ -172,3 +172,13 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 - Successfully ran the playbook with `failed=0`.
 - Verified Ansible can target the parent group using an Ansible ping test.
 - Note: Only one manager server is currently configured; testing across multiple machines requires adding a second server.
+
+### Milestone 9: Automated Software Management
+
+- Created `playbooks/software_management.yml`.
+- Used the `ansible.builtin.package` module to manage software.
+- Automated installation of the `tree` package on the Ubuntu managed server.
+- Used `state: present` to ensure the package is installed.
+- Passed the Ansible playbook syntax check.
+- Verified the installed package by running `tree --version` remotely.
+- Confirmed successful execution with zero failed hosts.

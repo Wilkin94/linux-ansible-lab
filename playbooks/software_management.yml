@@ -1,0 +1,10 @@
+---
+- name: Practice Automated Software Management
+  hosts: linux_servers
+  become: true
+
+  tasks:
+    - name: Install tree package
+      ansible.builtin.package:
+        name: tree
+        state: present
