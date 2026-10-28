@@ -29,7 +29,7 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 - [x] Ansible roles
 - [x] Multi-server automation
 - [x] Automated software management
-- [ ] Automated patch management
+- [x] Automated patch management
 
 ### Phase 3: Linux System Administration
 - [ ] User and group management
@@ -182,3 +182,15 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 - Passed the Ansible playbook syntax check.
 - Verified the installed package by running `tree --version` remotely.
 - Confirmed successful execution with zero failed hosts.
+
+### Milestone 10: Automated Patch Management
+
+- Created `playbooks/patch_management.yml`.
+- Used the `ansible.builtin.apt` module to manage Ubuntu package updates.
+- Refreshed the APT package cache before upgrading packages.
+- Applied available safe package upgrades using `upgrade: safe`.
+- Passed the Ansible playbook syntax check.
+- Confirmed the first playbook run completed with zero failed or unreachable hosts.
+- Reran the playbook and verified idempotent behavior with `changed-0`.
+- Verified the one `rtkit` update remained phased by Ubuntu (80% rollout) and did not force the update.
+- No automatic reboot was configured. 

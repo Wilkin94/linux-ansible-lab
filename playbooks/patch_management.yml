@@ -1,0 +1,10 @@
+---
+- name: Practice Automated Patch Management
+  hosts: linux_servers
+  become: true
+
+  tasks:
+    - name: Update package cache and install safe upgrades
+      ansible.builtin.apt:
+        update_cache: true
+        upgrade: safe
