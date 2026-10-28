@@ -1,0 +1,12 @@
+---
+- name: Practice User Management
+  hosts: linux_servers
+  become: true
+
+  tasks:
+    - name: Practice User Management
+      ansible.builtin.user:
+        name: labuser
+        groups: labgroup
+        append: true
+        state: present

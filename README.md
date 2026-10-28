@@ -32,7 +32,7 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 - [x] Automated patch management
 
 ### Phase 3: Linux System Administration
-- [ ] User and group management
+- [x] User and group management
 - [ ] File permissions and ownership
 - [ ] Process and service management
 - [ ] Package management
@@ -194,3 +194,20 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 - Reran the playbook and verified idempotent behavior with `changed-0`.
 - Verified the one `rtkit` update remained phased by Ubuntu (80% rollout) and did not force the update.
 - No automatic reboot was configured. 
+
+### Milestone 11: User and Group Management
+
+- Created `playbooks/user_management.yml`.
+- Used the `ansible.builtin.user` module to create the `labuser` account.
+- Used `state: present` to ensure the account exists.
+- Passed the Ansible playbook syntax check.
+- Ran the playbook successfully against the Ubuntu managed server.
+- Verified the `labuser` account with the `id` command.
+- Created the `labgroup` using `playbooks/group_management.yml`.
+- Used the `ansible.builtin.group` module to manage group creation.
+- Verified the group with `getent group labgroup`.
+- Added `labuser` to `labgroup` and verified group membership.
+- Confirmed the playbooks completed with zero failed or unreachable hosts.
+
+
+

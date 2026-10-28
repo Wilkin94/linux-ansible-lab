@@ -1,0 +1,10 @@
+---
+- name: Practice Group Management
+  hosts: linux_servers
+  become: true
+
+  tasks:
+    - name: Create labgroup
+      ansible.builtin.group:
+        name: labgroup
+        state: present
