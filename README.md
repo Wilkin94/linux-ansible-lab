@@ -31,20 +31,22 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 - [x] Automated software management
 - [x] Automated patch management
 
-### Phase 3: Linux System Administration
-- [x] User and group management
-- [ ] File permissions and ownership
-- [ ] Process and service management
-- [ ] Package management
-- [ ] Storage and filesystem management
-- [ ] Networking configuration and troubleshooting
-- [ ] Firewall configuration
-- [ ] SELinux administration
-- [ ] Scheduled tasks
-- [ ] System troubleshooting
-- [ ] Server health checks
-- [ ] Kickstart installation
-- [ ] Automated Kickstart deployment
+### Phase 3: Linux System Administration & RHCSA Preparation
+- [x] User and group management (Natively verified labuser and labgroup accounts)
+- [ ] File permissions and ownership (`chomd`, `chown`, plus SGID/Sticky Bits)
+- [ ] Process and service management (`systemctl`, `ps`, `top`. and `nice` overrides)
+- [ ] Software package management (Managing `/etc/yum.repos.d` repositories and `dnf`)
+- [ ] Storage and filesystem management (`fdisk`/`parted` partition mapping, secure `/etc/fstab`)
+- [ ] Logical Volume Management (Building physical volumes, volume groups, and extending LVs)
+- [ ] Networking configuration and troubleshooting (`nmcli` control, static IPs, and connection checks)
+- [ ] Basic container management (`podman` rootless runs, data persistence, and systemd intergration)
+- [ ] Firewall configuration (Opening ports, assigning zones, and using rich rules in `firewall-cmd`)
+- [ ] SELinux administration (Toggling booleans, using `semanage fcontext` / `restorecon`)
+- [ ] Scheduled tasks (Automating triggers via `cron` and `at` daemons)
+- [ ] System troubleshooting and boot target recovery (Interrupting GRUB to drop in with `rd.break`)
+- [ ] Server health checks (Writing basic custon shell scripting for alert validation)
+- [ ] Kickstart installation (Authoring automated configuration maps for unattended installs)
+- [ ] Automated Kickstart deployment (Deploying fresh headless target instances cleanly)
 
 ### Phase 4: Security and Vulnerability Management
 - [ ] Linux security hardening
