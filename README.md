@@ -211,5 +211,16 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 - Added `labuser` to `labgroup` and verified group membership.
 - Confirmed the playbooks completed with zero failed or unreachable hosts.
 
+### Milestone 12: RHEL Server01 Installation and Private Network Configuration
 
-
+- Installed `Red Hat Enterprise Linux 10.2` on the additional `RHEL-Server01` VM.
+- Created a dedicated RHEL environment for future RHCSA preparation and native Linux administration practice.
+- Configured the second network interface, `enp0s8` for the VirtualBox host-only private network.
+- Created a NetworkManager connection named `private-lab` using `nmcli`.
+- Configured the static IPv4 address `192.168.56.20/24`.
+- Activated the private network connection using `nmcli connection up private-lab`.
+- Verified the assigned IP address using `ip addr show enp0s8`.
+- Tested network connectivity to the original RHEL control node at `192.168.56.10` using `ping -c 4 192.168.56.10`.
+- Confirmed successful connectivity with `0% packet loss`.
+- Saved the VirtualBox snapshot `RHEL-Server01-Private-Network-Verified`.
+- Preserved the existing RHEL control node and Ubuntu managed server configuration.
