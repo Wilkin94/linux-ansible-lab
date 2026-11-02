@@ -33,7 +33,7 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 
 ### Phase 3: Linux System Administration & RHCSA Preparation
 - [x] User and group management (Natively verified labuser and labgroup accounts)
-- [ ] File permissions and ownership (`chomd`, `chown`, plus SGID/Sticky Bits)
+- [x] File permissions and ownership (`chomd`, `chown`, plus SGID/Sticky Bits)
 - [ ] Process and service management (`systemctl`, `ps`, `top`. and `nice` overrides)
 - [ ] Software package management (Managing `/etc/yum.repos.d` repositories and `dnf`)
 - [ ] Storage and filesystem management (`fdisk`/`parted` partition mapping, secure `/etc/fstab`)
@@ -224,3 +224,15 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 - Confirmed successful connectivity with `0% packet loss`.
 - Saved the VirtualBox snapshot `RHEL-Server01-Private-Network-Verified`.
 - Preserved the existing RHEL control node and Ubuntu managed server configuration.
+
+### Milestone 13: Automated File Permissions Management
+
+- Created `playbooks/file_permissions.yml` to automate directory permissions on Ubuntu.
+- Used Ansible to create `/home/vboxuser/ansible-permissions-lab`.
+- Configured directory permissions to`750` (`rwxr-x---`).
+- Configured directory ownership as `vboxuser:vboxuser`.
+- Successfully passed Ansible playbook syntax check.
+- Executed the playbook against the Ubuntu managed server at `192.168.56.103`.
+- Verified directory permissions and ownership using the Ansible command module.
+- Reran the playbook and confirmed idempotency with `changed=0`.
+- Confimed the playbook completed with zero failed or unreachable hosts.

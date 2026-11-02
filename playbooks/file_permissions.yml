@@ -1,0 +1,13 @@
+---
+- name: Configure file permissions on Ubuntu
+  hosts: ubuntu
+  become: true
+
+  tasks:
+    - name: Create permissions lab directory
+      ansible.builtin.file:
+        path: /home/vboxuser/ansible-permissions-lab
+        state: directory
+        owner: vboxuser
+        group: vboxuser
+        mode: '0750'
