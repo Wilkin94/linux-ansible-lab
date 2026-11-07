@@ -236,3 +236,37 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 - Verified directory permissions and ownership using the Ansible command module.
 - Reran the playbook and confirmed idempotency with `changed=0`.
 - Confimed the playbook completed with zero failed or unreachable hosts.
+
+
+
+## Native Linux / RHCSA Training — RHEL-Server01
+
+This section documents hands-on Red Hat Enterprise Linux administration and RHCSA preparation on RHEL-Server01, separate from Ansible automation.
+
+### Milestone 14: Native Linux File Permissions and Ownership — COMPLETE
+
+- [x] Completed all 12 hands-on permissions and ownership exercises.
+- [x] Practiced id, ls -l, ls -ld, chmod, chown, chgrp, and umask.
+- [x] Managed users, groups, file ownership, and permissions.
+- [x] Practiced numeric and symbolic permissions, SGID, and sticky bit.
+- [x] Verified results and saved a VirtualBox snapshot.
+
+### Milestone 15: Native Linux Process and Service Management — HANDS-ON COMPLETE
+
+- [x] Monitored processes using ps, ps aux, and top.
+- [x] Managed background processes and terminated processes with kill.
+- [x] Adjusted process priorities using nice and renice.
+- [x] Inspected SSH and chronyd services with systemctl.
+- [x] Registered RHEL-Server01 with Red Hat and enabled software repositories.
+- [x] Installed Apache HTTP Server (httpd) using dnf.
+- [x] Practiced starting, stopping, restarting, reloading, enabling, and disabling services.
+- [x] Verified Apache was active and enabled at boot.
+- [x] Inspected Apache logs using journalctl.
+- [x] Passed the RHCSA practical challenge and knowledge check.
+
+### Upcoming Native Linux / RHCSA Objectives
+
+- [ ] Native package management and patching
+- [ ] Security hardening with firewalld and SELinux
+- [ ] Server health checks and troubleshooting
+  
