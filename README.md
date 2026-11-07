@@ -34,7 +34,7 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 ### Phase 3: Linux System Administration & RHCSA Preparation
 - [x] User and group management (Natively verified labuser and labgroup accounts)
 - [x] File permissions and ownership (`chomd`, `chown`, plus SGID/Sticky Bits)
-- [ ] Process and service management (`systemctl`, `ps`, `top`. and `nice` overrides)
+- [x] Process and service management (`systemctl`, `ps`, `top`. and `nice` overrides)
 - [ ] Software package management (Managing `/etc/yum.repos.d` repositories and `dnf`)
 - [ ] Storage and filesystem management (`fdisk`/`parted` partition mapping, secure `/etc/fstab`)
 - [ ] Logical Volume Management (Building physical volumes, volume groups, and extending LVs)
@@ -237,13 +237,23 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 - Reran the playbook and confirmed idempotency with `changed=0`.
 - Confimed the playbook completed with zero failed or unreachable hosts.
 
+### Milestone 14: Automated Service Management
 
+- Created `playbooks/service_managment.yml` to automate Apache service management on ubuntu.
+- Used the `ansible.builtin.apt` module to install Apache (`apache2`).
+- Used the `ansible.builtin.service` module to start and enbale Apache.
+- Passed the Ansible playbook syntax check.
+- Successfully executed the playbook against the Ubuntu managed server at `192.168.56.103`.
+- Verified Apache was enabled at boot using `systemctl is-enabled apache2`.
+- Verified Apache was running using `systemctl is-active apache2`.
+- Reran the playbook and confirmed idempotency with `changed=0`.
+- Confirmed the playbook completed with zero failed or unreachable hosts.
 
 ## Native Linux / RHCSA Training — RHEL-Server01
 
 This section documents hands-on Red Hat Enterprise Linux administration and RHCSA preparation on RHEL-Server01, separate from Ansible automation.
 
-### Milestone 14: Native Linux File Permissions and Ownership — COMPLETE
+### Milestone 1: Native Linux File Permissions and Ownership — COMPLETE
 
 - [x] Completed all 12 hands-on permissions and ownership exercises.
 - [x] Practiced id, ls -l, ls -ld, chmod, chown, chgrp, and umask.
@@ -251,7 +261,7 @@ This section documents hands-on Red Hat Enterprise Linux administration and RHCS
 - [x] Practiced numeric and symbolic permissions, SGID, and sticky bit.
 - [x] Verified results and saved a VirtualBox snapshot.
 
-### Milestone 15: Native Linux Process and Service Management — HANDS-ON COMPLETE
+### Milestone 2: Native Linux Process and Service Management — HANDS-ON COMPLETE
 
 - [x] Monitored processes using ps, ps aux, and top.
 - [x] Managed background processes and terminated processes with kill.
@@ -264,9 +274,4 @@ This section documents hands-on Red Hat Enterprise Linux administration and RHCS
 - [x] Inspected Apache logs using journalctl.
 - [x] Passed the RHCSA practical challenge and knowledge check.
 
-### Upcoming Native Linux / RHCSA Objectives
 
-- [ ] Native package management and patching
-- [ ] Security hardening with firewalld and SELinux
-- [ ] Server health checks and troubleshooting
-  

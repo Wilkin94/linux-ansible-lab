@@ -1,0 +1,17 @@
+---
+- name: Automated Service Management
+  hosts: linux_servers
+  become: true
+
+  tasks:
+    - name: Install Apache
+      ansible.builtin.apt:
+        name: apache2
+        state: present
+        update_cache: true
+
+    - name: Start and enable Apache
+      ansible.builtin.service:
+        name: apache2
+        state: started
+        enabled: true
