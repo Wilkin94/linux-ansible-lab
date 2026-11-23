@@ -6,6 +6,7 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 
 - RHEL - Ansible control node
 - Ubuntu - Managed server
+- RHEL-Server01 - Native Linux RHCSA Preparation
 - VirtualBox
 - SSH
 - Ansible Core 2.16.16
