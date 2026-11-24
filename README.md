@@ -11,6 +11,10 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 - SSH
 - Ansible Core 2.16.16
 
+### Three-Node Linux Infrastructure Topology
+
+![Three-Node Linux Infrastructure Lab](screenshots/Three-Node%20Linux%20Infrastructure%20Lab.png)
+
 ## Progress
 
 ### Phase 1: Linux Foundation
