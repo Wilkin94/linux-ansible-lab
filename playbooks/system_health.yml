@@ -1,0 +1,42 @@
+---
+- name: Automated System Health Checks
+  hosts: linux_servers
+  become: true
+  gather_facts: true
+
+  tasks:
+    - name: Display CPU information
+      ansible.builtin.debug:
+        msg: "CPU cores: {{ ansible_facts['processor_vcpus'] }}"
+
+    - name: Display memory information
+      ansible.builtin.debug:
+        msg: "Total memory: {{ ansible_facts['memtotal_mb'] }} MB"
+
+    - name: Check disk space
+      ansible.builtin.command: df -h /
+      register: disk_space
+      changed_when: false
+
+    - name: Display disk space
+      ansible.builtin.debug:
+        var: disk_space.stdout_lines
+
+    - name: Display system uptime
+      ansible.builtin.command: uptime -p
+      register: system_uptime
+      changed_when: false
+
+    - name: Show system uptime
+      ansible.builtin.debug:
+        var: system_uptime.stdout
+
+    - name: Check Apache service
+      ansible.builtin.command: systemctl is-active apache2
+      register: apache_status
+      changed_when: false
+
+    - name: Display Apache status
+      ansible.builtin.debug:
+        var: apache_status.stdout
+

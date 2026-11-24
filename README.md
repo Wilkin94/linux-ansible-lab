@@ -49,7 +49,7 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 - [ ] SELinux administration (Toggling booleans, using `semanage fcontext` / `restorecon`)
 - [ ] Scheduled tasks (Automating triggers via `cron` and `at` daemons)
 - [ ] System troubleshooting and boot target recovery (Interrupting GRUB to drop in with `rd.break`)
-- [ ] Server health checks (Writing basic custon shell scripting for alert validation)
+- [x] Server health checks (Writing basic custon shell scripting for alert validation)
 - [ ] Kickstart installation (Authoring automated configuration maps for unattended installs)
 - [ ] Automated Kickstart deployment (Deploying fresh headless target instances cleanly)
 
@@ -253,6 +253,19 @@ Hands-on Linux system administration and Ansible automation lab using RHEL and U
 - Verified Apache was running using `systemctl is-active apache2`.
 - Reran the playbook and confirmed idempotency with `changed=0`.
 - Confirmed the playbook completed with zero failed or unreachable hosts.
+
+### Milestone 15 - Automated System Health Checks 
+
+- Created `playbooks/system_checks.yml` to monitor Ubuntu.
+- Collected CPU and memory information using Ansible facts.
+- Checked disk utilitzation and available storage with `df -h /`.
+- Checked system uptime using `uptime -p`.
+- Verified Apache service status using `systemctl is-active apache2`.
+- Used `register` and `debug` to display system-health results.
+- Used `changed_when: false` for ready-only checks.
+- Verified successful execution twice.
+- Final results: `ok=9 changed=0 unreachable=0 failed=0`.
+
 
 ## Native Linux / RHCSA Training — RHEL-Server01
 
